@@ -165,6 +165,7 @@ Step 3 — confirm_gen_code()                         → 确认后写入文件
 ## 5. 执行流程
 
 ### 5.1 准备阶段
+- **参考项目特性档案**（[G00_项目特性](../00_项目特性/G00_项目特性.md)），确认GM指令集合（用于BDD Given步骤）
 - 搭建MCP Server环境（PyWinauto/Appium按平台选择）
 - 配置LLM接入（GitHub Copilot或其他LLM服务）
 - 安装Behave BDD框架及依赖
