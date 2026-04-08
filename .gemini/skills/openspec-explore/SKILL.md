@@ -130,6 +130,45 @@ If the user mentions a change or you detect one is relevant:
 
 4. **The user decides** - Offer and move on. Don't pressure. Don't auto-capture.
 
+### Special case: exploring for test-case generation
+
+If the user is exploring how to generate test cases, testing scenarios, or QA assets from documents, do **input-source classification first** before discussing coverage.
+
+#### Path A — Excel/planning doc converted to Markdown
+
+Use this path when the input looks like an original planning/config document in Markdown form:
+- tables, enums, reward grids, config fields, UI notes, page rules
+- document is rule-heavy rather than decision-heavy
+
+How to explore it:
+- treat the Markdown as the primary business-rule source
+- extract entry conditions, state enums, numeric boundaries, rewards, UI rules, cycle rules, exception rules
+- frame discussion around player flow, config coverage, display validation, boundary coverage
+- use proposal/design only as supporting technical context if they also exist
+
+#### Path B — SDD / OpenSpec proposal + design analysis
+
+Use this path when the core inputs are `proposal.md` + `design.md` (optionally `tasks.md`) and the content is structured around goals and decisions:
+- Why / What Changes / Goals / Decisions / Risks / Open Questions
+
+How to explore it:
+- treat `proposal.md` as the source of business goals, scope, impact, acceptance focus
+- treat `design.md` as the source of state transitions, dependencies, error recovery, timing rules, persistence, client/server responsibilities
+- treat `tasks.md` only as regression-impact and implementation-surface context
+- do not mistake implementation steps for final business rules
+
+#### What to say out loud
+
+When this classification matters, explicitly state which path you're using before deeper analysis:
+- "I'm treating this as Excel-to-Markdown planning input, so I'll analyze it as primary rules/config."
+- "I'm treating this as proposal+design input, so I'll derive rules from goals, decisions, and recovery logic."
+
+#### If both exist
+
+- prefer Path A when original planning/config-style Markdown exists
+- use Path B to supplement system behavior, recovery, and implementation constraints
+- if only proposal/design exist, use Path B as the primary route
+
 ---
 
 ## What You Don't Have To Do
