@@ -7,6 +7,8 @@ tags: [workflow, archive, experimental]
 
 Archive a completed change in the experimental workflow.
 
+> Windows PowerShell: replace `openspec` in command examples with `openspec.cmd`.
+
 **Input**: Optionally specify a change name after `/opsx:archive` (e.g., `/opsx:archive add-auth`). If omitted, check if it can be inferred from conversation context. If vague or ambiguous you MUST prompt for available changes.
 
 **Steps**

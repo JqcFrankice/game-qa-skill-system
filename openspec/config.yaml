@@ -1,20 +1,22 @@
 schema: spec-driven
 
-# Project context (optional)
-# This is shown to AI when creating artifacts.
-# Add your tech stack, conventions, style guides, domain knowledge, etc.
-# Example:
-#   context: |
-#     Tech stack: TypeScript, React, Node.js
-#     We use conventional commits
-#     Domain: e-commerce platform
+context: |
+  Repository type: documentation-driven game QA skill and testcase system.
+  Domain: game functional testing, specialist testing, OpenSpec requirement analysis, and XMind testcase assets.
+  Canonical generation rules: qa/04_流程与工具能力/T08_测试用例生成规范.md.
+  Detailed XMind cases use TC -> steps -> expected results -> P0/P1/P2.
+  Smoke XMind points use test point -> S/A/B and must not mix detailed testcase nodes.
+  Generated assets are saved under testcases/ and registered in testcases/README.md.
+  Windows PowerShell must invoke the CLI as openspec.cmd.
 
-# Per-artifact rules (optional)
-# Add custom rules for specific artifacts.
-# Example:
-#   rules:
-#     proposal:
-#       - Keep proposals under 500 words
-#       - Always include a "Non-goals" section
-#     tasks:
-#       - Break tasks into chunks of max 2 hours
+rules:
+  proposal:
+    - Separate new capabilities from modified capabilities using kebab-case names.
+    - State non-goals and user-visible impact explicitly.
+  design:
+    - Record state transitions, persistence, recovery behavior, and client/server responsibility boundaries.
+    - Do not invent configuration values that are absent from source requirements.
+  specs:
+    - Make every requirement testable and include at least one WHEN/THEN scenario.
+  tasks:
+    - Include focused validation tasks for data, integration, UI, and recovery behavior.

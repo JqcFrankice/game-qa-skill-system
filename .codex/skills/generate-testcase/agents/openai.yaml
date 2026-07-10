@@ -1,0 +1,4 @@
+interface:
+  display_name: "Generate Game QA Test Cases"
+  short_description: "Generate staged game QA cases from specs and Excel."
+  default_prompt: "Use $generate-testcase to generate staged game QA test cases from the provided feature document."

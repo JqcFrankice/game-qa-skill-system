@@ -1,0 +1,4 @@
+interface:
+  display_name: "Explore OpenSpec Change"
+  short_description: "Explore requirements and risks before or during a change."
+  default_prompt: "Use $openspec-explore to investigate this idea and clarify the change before implementation."

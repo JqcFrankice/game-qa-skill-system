@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apply OpenSpec Change"
+  short_description: "Implement tasks from an existing OpenSpec change."
+  default_prompt: "Use $openspec-apply-change to implement the next tasks in the current OpenSpec change."

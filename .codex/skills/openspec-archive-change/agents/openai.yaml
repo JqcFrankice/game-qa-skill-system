@@ -1,0 +1,4 @@
+interface:
+  display_name: "Archive OpenSpec Change"
+  short_description: "Validate and archive a completed OpenSpec change."
+  default_prompt: "Use $openspec-archive-change to validate and archive the completed OpenSpec change."

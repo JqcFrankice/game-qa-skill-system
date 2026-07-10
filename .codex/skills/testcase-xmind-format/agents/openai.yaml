@@ -1,0 +1,4 @@
+interface:
+  display_name: "Format XMind Test Cases"
+  short_description: "Format detailed or smoke QA assets for XMind import."
+  default_prompt: "Use $testcase-xmind-format to format these game QA cases as XMind-importable Markdown."
